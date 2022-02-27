@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="Icon-Symbol-Lock-Sign-Internet-Security-Blue-2430207.png">
+
+    <style>
+
+        body {
+            width:100%;
+            background: linear-gradient(30deg, #21bfe6,#d719f4);
+                        /* background: linear-gradient(90deg, rgba(243,7,253) 10%, rgba(107,111,236) 60%, rgba(14,210,226) 100%); */
+        }
+
+        .content {
+            width: 25%;
+            height: 750px;
+            background-color: #cdc9ca;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translateX(-49%) translateY(0%);
+            border-radius: 30px;
+           
+        }
+
+        .main {
+
+            margin: 100px 40px 10px;
+
+        }
+
+        h1 {
+
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-weight: 700;
+
+
+        }
+
+        .form-group {
+            position: relative;
+            
+        }
+
+        .form-group>i {
+            font-family: 'Poppins', sans-serif;
+            font-style: "Medium 500";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+
+        }
+
+        input {
+
+            background-color: #cdc9ca;
+            height: 40px;
+            width: 90%;
+            color: black;
+            padding-left: 40px;
+            border: none;
+            font-family: Poppins, sans-serif;
+            font-weight: 500;
+            font-size: 17px ;
+            border-bottom: 0.5px solid;
+            
+
+        }
+        select{
+            background-color: #cdc9ca;
+            height: 40px;
+            width: 100%;
+            color: black;
+            padding-left: 40px;
+            border: none;
+            font-family: Poppins, sans-serif;
+            font-weight:500;
+            border-bottom: 0.5px solid;
+            font-size: 17px ;
+
+        }
+        .form-group:focus{
+            border: 0px;
+            outline: none;
+        }
+
+        input:focus {
+            border: 0px;
+            outline: none;
+        }
+
+        label {
+            font-family: 'Poppins', sans-serif;
+             font-size: 13px;
+        }
+        button {
+            width: 80%;
+            height: 35px;
+            border: none;
+            position: absolute;
+            bottom:30px;
+            border-radius: 30px;
+            left: 10%;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: linear-gradient(30deg, #21bfe6 , #d719f4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="main">
+            <h1>Say Hello!</h1>
+            <div class="form-group" style="margin-top: 30px;">
+                <label> Your Name</label>
+                <input type="text" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group" style="margin-top: 30px;">
+                <label>Email</label>
+                <input type="email" placeholder="Enter Your E-mail Address">
+            </div>
+            <div class="form-group" style="margin-top: 30px;">
+                <label>Needed Service</label>
+                <select>
+                    <option selected> Choose Service</option>
+                    <option> Choose Service1</option>
+                    <option> Choose Service2</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-top: 30px;">
+                <label>Budget</label>
+                <br>
+                <select>
+                    <option selected> Choose Budget</option>
+                    <option> Choose Budget1</option>
+                    <option> Choose Budget2</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <label>Budget</label>
+                <input class="message" row: 10 type="text">
+            </div>
+        </div>
+        <button class="btn-login">Submit <i class="fa-solid fa-arrow-right-long"></i> </button>
+    </div>
+</body>
+
+</html>
