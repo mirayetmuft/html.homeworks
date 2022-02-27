@@ -1,6 +1,6 @@
 USE [StudentDb]
 GO
-/****** Object:  Table [dbo].[Homeworks]    Script Date: 27.02.2022 17:05:24 ******/
+/****** Object:  Table [dbo].[Homeworks]    Script Date: 27.02.2022 17:09:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16,7 +16,7 @@ CREATE TABLE [dbo].[Homeworks](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[StudentHomeworks]    Script Date: 27.02.2022 17:05:24 ******/
+/****** Object:  Table [dbo].[StudentHomeworks]    Script Date: 27.02.2022 17:09:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -25,13 +25,14 @@ CREATE TABLE [dbo].[StudentHomeworks](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[StudentId] [int] NULL,
 	[HomeworkId] [int] NULL,
+	[content] [varchar](255) NULL,
  CONSTRAINT [PK_StudentHomeworks] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Topics]    Script Date: 27.02.2022 17:05:24 ******/
+/****** Object:  Table [dbo].[Topics]    Script Date: 27.02.2022 17:09:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -45,7 +46,7 @@ CREATE TABLE [dbo].[Topics](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Votes]    Script Date: 27.02.2022 17:05:24 ******/
+/****** Object:  Table [dbo].[Votes]    Script Date: 27.02.2022 17:09:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
