@@ -1,6 +1,6 @@
 USE [StudentDb]
 GO
-/****** Object:  Table [dbo].[Homeworks]    Script Date: 27.02.2022 14:30:59 ******/
+/****** Object:  Table [dbo].[Homeworks]    Script Date: 27.02.2022 17:05:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9,13 +9,14 @@ CREATE TABLE [dbo].[Homeworks](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[TopicId] [int] NULL,
 	[Name] [varchar](50) NULL,
+	[Description] [nvarchar](255) NULL,
  CONSTRAINT [PK_Homeworks] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[StudentHomeworks]    Script Date: 27.02.2022 14:30:59 ******/
+/****** Object:  Table [dbo].[StudentHomeworks]    Script Date: 27.02.2022 17:05:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -30,7 +31,7 @@ CREATE TABLE [dbo].[StudentHomeworks](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Topics]    Script Date: 27.02.2022 14:30:59 ******/
+/****** Object:  Table [dbo].[Topics]    Script Date: 27.02.2022 17:05:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -38,23 +39,22 @@ GO
 CREATE TABLE [dbo].[Topics](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](50) NULL,
-	[Content] [varchar](255) NULL,
  CONSTRAINT [PK_Topics] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Votes]    Script Date: 27.02.2022 14:30:59 ******/
+/****** Object:  Table [dbo].[Votes]    Script Date: 27.02.2022 17:05:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Votes](
-	[Id] [int] NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[HomeworkId] [int] NULL,
 	[UserId] [int] NULL,
-	[Score] [int] IDENTITY(1,1) NOT NULL,
+	[Score] [int] NOT NULL,
  CONSTRAINT [PK_Votes] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
